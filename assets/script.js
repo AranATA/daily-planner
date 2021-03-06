@@ -9,21 +9,33 @@ $("#currentDay").text(today);
 
 // moment().seconds(30).valueOf() === new Date().setSeconds(30);
 
-var now = new Date().getHours(); 
+var now = new Date().getHours();
 
-// document.getElementsByClass("button").addEventListener("click", function(){
+console.log(now);
 
-// });
-var str = localStorage.getItem("9am");
-str
+console.log(localStorage.key(0));
 
-$(".button").on("click", function(){
-var textG = $(this).siblings("textarea").val();
+var fantasy = window.localStorage.getItem("9am");
 
-var textT = $(this).siblings(".assignedTime").text();
-localStorage.setItem(textT, textG);
+console.log(fantasy);
 
+$(".9amRow").children("textarea").val(fantasy);
+
+
+
+$(".saveBtn").on("click", function (event) {
+    event.preventDefault();
+    var notes = $(this).siblings("textarea").val();
+
+    var rowHourActive = $(this).siblings(".rowHour").text();
+
+    window.localStorage.setItem(rowHourActive, notes);
 
 });
+
+// function statusTimeblock(){
+// if (now === 9
+
+// }
 
 
