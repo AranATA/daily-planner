@@ -35,18 +35,10 @@ The codebase achieves the following criteria:<br>
 
 ***
 
-A full view screenshot that shows <br>
+A full view of the page <br>
 <br>
 
-![alt text](assets/images/scrshot-home.png)
-
-<br>
-<br>
-
-A full view screenshot that shows <br>
-<br>
-
-![alt text](assets/images/scrshot-home22.png)
+![alt text](assets/images/scrshot.png)
 
 <br>
 <br>
@@ -66,9 +58,19 @@ A short video that shows how the UI works.<br>
 These notes and links are listing some valuable references among others that I used doing this project:<br>
 <br>
 
+[https://jquery.com/](https://jquery.com/)
+
+[https://getbootstrap.com/](https://getbootstrap.com/)
+
+[https://momentjs.com/docs/#/displaying/](https://momentjs.com/docs/#/displaying/)
+
 [https://developer.mozilla.org/](https://developer.mozilla.org/)
 
 [https://favicon.io/favicon-generator/](https://favicon.io/favicon-generator/)
+
+[https://fonts.google.com/?preview.text_type=custom](https://fonts.google.com/?preview.text_type=custom)
+
+[https://fontawesome.com/](https://fontawesome.com/)
 
 [https://shields.io/category/dependencies/](https://shields.io/category/dependencies/)
 
@@ -85,6 +87,7 @@ Stephen Woosley - Bootcamp Instructor<br>
 Patrick Haberern - Bootcamp TA<br>
 Tim Nagorski - Bootcamp TA<br>
 Sean Walmer - Bootcamp TA<br>
+Alexis San Javier - Bootcamp Tutor<br>
 <br>
 <br>
 
