@@ -6,42 +6,32 @@ $("#currentDay").text(today);
 // moment.js
 var now = new Date().getHours();
 
-var nineNote = window.localStorage.getItem("9am");
-$(".9amRow").children("textarea").val(nineNote);
+var timeblocks = Array.from(document.getElementsByTagName('textarea'));
+console.log(timeblocks);
 
-var tenNote = window.localStorage.getItem("10am");
-$(".10amRow").children("textarea").val(tenNote);
+function getData(){
+    for (var j = 0; j < localStorage.length; j++) {
+      var keyNumbers = localStorage.key(j);
+      timeblocks.forEach(function(item) {
+        if (item.dataset.number == keyNumbers) {
+        item.value = localStorage.getItem(keyNumbers)
+        }
+      })   
+    }
+}
 
-var elevenNote = window.localStorage.getItem("11am");
-$(".11amRow").children("textarea").val(elevenNote);
-
-var twelveNote = window.localStorage.getItem("12pm");
-$(".12pmRow").children("textarea").val(twelveNote);
-
-var thirteenNote = window.localStorage.getItem("1pm");
-$(".1pmRow").children("textarea").val(thirteenNote);
-
-var fourteenNote = window.localStorage.getItem("2pm");
-$(".2pmRow").children("textarea").val(fourteenNote);
-
-var fifteenNote = window.localStorage.getItem("3pm");
-$(".3pmRow").children("textarea").val(fifteenNote);
-
-var sixteenNote = window.localStorage.getItem("4pm");
-$(".4pmRow").children("textarea").val(sixteenNote);
-
-var seventeenNote = window.localStorage.getItem("5pm");
-$(".5pmRow").children("textarea").val(seventeenNote);
+getData();
 
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
     var notes = $(this).siblings("textarea").val();
-    var rowHourActive = $(this).siblings(".rowHour").text();
+    var rowHourActive = $(this).siblings("textarea").data("number");
     window.localStorage.setItem(rowHourActive, notes);
+    
 });
 
 // you can also use: var timeblocks = [].slice.call(timeblocksHTML);
-var timeblocks = Array.from(document.getElementsByTagName('textarea'));
+
 
 function statusTimeblock(){
     for (var i=0; i<timeblocks.length; i++) {
