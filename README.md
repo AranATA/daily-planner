@@ -46,7 +46,7 @@ A full view of the page <br>
 A short video that shows how the UI works.<br>
 <br>
 
-![portfolio demo](assets/images/daily-planner.gif)
+![daily planner demo](assets/images/daily-planner.gif)
 
 <br>
 <br>
